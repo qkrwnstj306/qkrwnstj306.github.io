@@ -1,9 +1,10 @@
-title: PORTPOLIO
-subtitle: A Portfolio Jekyll Theme Built for Developers
+title: PORTFOLIO # Tab에 뜨는 제목 
+subtitle: A Portfolio Built by Junseo Park # Tab에 마우스 대면, 나오는 부제목
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
-url: "https://qkrwnstj306.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
+#url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
+url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
@@ -24,40 +25,46 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
-author: John Doe
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
-hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author_logo: author_img1.jpg # home, /about에서의 author image
+author: Junseo Park # Home의 Hi, I am {author}를 의미한다.
+author_bio: "Hi, my name is Junseo Park. I am currently a 3rd-semester master's student in the Computer AI department at Dongguk University, working under the supervision of [Prof. Hyeryung Jang](https://sites.google.com/view/d-ion-lab/home?authuser=0). My research focuses on computer vision, particularly image generation, and I am fascinated by the powerful prior of diffusion models. I am also interested in explainable AI (XAI) and its applications in image editing, style transfer, and optimization." # /about에서의 author 설명
+author_email: "mki730@dgu.ac.kr" # /about
+author_location: Korea # /about
+author_website_url: "https://github.com/qkrwnstj306" # /about
+typewrite-text: Welcome to my development lab. # home에서의 설명
+hero_cover_img: sample_cover.jpg # /assets/img에 image를 넣어야 한다. cover_img
 
-# Experiences
+# Experiences (/about의 Work Experience section)
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
-              visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
+            # - company_name: Google
+            #   company_logo: google.png
+            #   company_url: https://google.com
+            #   designation: Software Engineer
+            #   description: Worked on various Google Products
+            #   visibility: true
+            # - company_name: Microsoft
+            #   company_logo: microsoft.png
+            #   company_url: https://microsoft.com
+            #   designation: Azure Developer
+            #   description: Worked on various Azure Cloud Products
+            #   visibility: true
 
-# Education
+# Education (/about의 Education section)
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: dongguk_university.jpg
+                college_name: Dongguk University
+                college_url: https://www.dongguk.edu/main
+                college_degree: M.S. in Computer AI (Artificial Intelligence)
+                description: 2023.09 - Expected 2025.09
+                visibility: true
+              - college_logo: dongguk_university.jpg
+                college_name: Dongguk University
+                college_url: https://www.dongguk.edu/main
+                college_degree: B.E. in Information and Communication Engineering.
+                description: 2018.03 - 2023.09
                 visibility: true
 
-# Projects
+# Projects (/about의 Projects section)
 author_project_details:
               - project_thumbnail: gamershub.png
                 project_title: Gamers Hub
@@ -71,9 +78,9 @@ author_project_details:
                 visibility: true
 
 # social links
-twitter_username: xplor4r
-github_username:  sujaykundu777
-instagram_username: xplor4r
+#twitter_username: xplor4r
+github_username:  qkrwnstj306
+instagram_username: mki730
 # facebook_username: johndoe
 # linkedin_username: johndoe
 # behance_username: johndoe
@@ -88,14 +95,14 @@ instagram_username: xplor4r
 # hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+wakatime_username: qkrwnstj306
 
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+#mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 # contact form - (choose formspress or getform)
 # getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: johndoe@gmail.com
+formspree_email: mki730@dgu.ac.kr
 
 # releases - widget can be (sidebar, modal or embed)
 olvy_organization: devlopr
