@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Welcome to devlopr-jekyll !"
-summary: "Getting Started using devlopr-jekyll"
+title:  "StyleForge: Enhancing Text-to-Image Synthesis for Any Artistic Styles with Dual Binding"
+summary: "ACM TRANSACTIONS ON GRAPHICS (Under review), 2024"
 author: Junseo Park
-date: '2024-05-22 14:35:23 +0530'
-category: jekyll
-thumbnail: /assets/img/posts/code.jpg
-keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes
-permalink: /blog/welcome-to-devlopr-jekyll/
+contributors: "Junseo Park, Beomseok Ko, and Hyeryung Jang"
+date: '2024-09-04 14:35:23 +0530'
+category: paper
+thumbnail: /assets/img/posts/styleforge_1.png
+keywords: diffusion model, style training, dreambooth
+permalink: /blog/styleforge/
 usemathjax: true
+paper_link: "https://arxiv.org/abs/2404.05256"
+image: "/assets/img/posts/styleforge_1.png"
 ---
 
 

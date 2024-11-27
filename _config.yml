@@ -3,8 +3,8 @@ subtitle: A Portfolio Built by Junseo Park # Tab에 마우스 대면, 나오는 
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
-#url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
-url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
+url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
+#url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
@@ -34,20 +34,20 @@ author_website_url: "https://github.com/qkrwnstj306" # /about
 typewrite-text: Welcome to my development lab. # home에서의 설명
 hero_cover_img: sample_cover.jpg # /assets/img에 image를 넣어야 한다. cover_img
 
-# Experiences (/about의 Work Experience section)
+# Experiences (/about의 Work Experience section) (현재 비활성화 상태 - 아래에서 True로 수정가능)
 author_work_experiences:
-            # - company_name: Google
-            #   company_logo: google.png
-            #   company_url: https://google.com
-            #   designation: Software Engineer
-            #   description: Worked on various Google Products
-            #   visibility: true
-            # - company_name: Microsoft
-            #   company_logo: microsoft.png
-            #   company_url: https://microsoft.com
-            #   designation: Azure Developer
-            #   description: Worked on various Azure Cloud Products
-            #   visibility: true
+            - company_name: Google
+              company_logo: google.png
+              company_url: https://google.com
+              designation: Software Engineer
+              description: Worked on various Google Products
+              visibility: true
+            - company_name: Microsoft
+              company_logo: microsoft.png
+              company_url: https://microsoft.com
+              designation: Azure Developer
+              description: Worked on various Azure Cloud Products
+              visibility: true
 
 # Education (/about의 Education section)
 author_education_details:
@@ -114,9 +114,9 @@ highlighter: rouge
 permalink: pretty
 
 # Choose what to show ( can be true or false)
-show_author_work_experiences: true
+show_author_work_experiences: False
 show_author_education_details: true
-show_author_project_details: true
+show_author_project_details: False
 
 # pagination of posts
 paginate: 4

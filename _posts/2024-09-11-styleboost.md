@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Adding Multiple Categories in Posts"
-summary: "Learn how to add categories in posts"
-author: xplor4r
-date: '2021-02-28 1:35:23 +0530'
-category: ['jekyll','guides', 'sample_category']
-tags: jekyll
-thumbnail: /assets/img/posts/code.jpg
-keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes, multi categories and tags
-usemathjax: false
-permalink: /blog/adding-categories-tags-in-posts/
+title:  "StyleBoost: A Study of Personalizing Text-to-Image Generation in Any Style using DreamBooth"
+summary: "International Conference on Information and Communication Technology Convergence (ICTC), 2023"
+author: Junseo Park
+contributors: "Junseo Park, Beomseok Ko, and Hyeryung Jang"
+date: '2023-09-11 14:35:23 +0530'
+category: paper
+thumbnail: /assets/img/posts/styleboost_1.png
+keywords: diffusion model, style training, dreambooth
+permalink: /blog/styleboost
+usemathjax: true
+paper_link: "https://ieeexplore.ieee.org/document/10392676"
+image: "/assets/img/posts/styleboost_1.png"
 ---
 
 ## Adding Multiple Categories in Posts

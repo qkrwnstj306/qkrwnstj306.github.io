@@ -1,65 +1,173 @@
 ---
 layout: default
 ---
+<style>
+  /* 기본 카드 스타일 */
+  .card-body {
+    display: flex;
+    flex-direction: column; /* 세로로 텍스트와 버튼 배치 */
+    flex-grow: 1; /* 텍스트 영역을 최대화 */
+    padding: 15px;
+    padding-right: 0;
+    overflow: visible; /* 텍스트가 잘리지 않도록 설정 */
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem; /* 카드 제목 크기 증가 */
+    font-weight: bold;
+    margin-bottom: 10px; /* 제목과 본문 간 간격 추가 */
+  }
+
+  .authors {
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px; /* 저자 정보와 본문 간 간격 추가 */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* 카드 본문 크기 증가 */
+    margin-bottom: 15px; /* 본문과 다른 요소 간 간격 */
+  }
+
+  p.authors, p.card-text, h6.card-subtitle {
+    margin-top: 0;
+    margin-bottom: 7px;
+    line-height: 1.5; /* 줄 간격을 넓혀 가독성 개선 */
+  }
+
+  /* 버튼 스타일 */
+  .card-btn-container {
+    display: flex;
+    gap: 10px; /* 버튼 간 간격 */
+    position: absolute; /* 카드 내부에서 고정 위치 */
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .card-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+    height: auto;
+  }
+
+  .github-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+  }
+
+  .github-btn:hover {
+    background-color: #1d72b3;
+  }
+
+  .paper-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+  }
+
+  .paper-btn:hover {
+    background-color: #5a6268;
+  }
+
+  .category {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* 반응형 디자인 수정 */
+  @media (max-width: 768px) {
+    .card {
+      display: block; /* 카드가 세로로 배치되도록 변경 */
+      margin-bottom: 20px; /* 카드 간 간격 조정 */
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto; /* 이미지 크기 자동 조정 */
+    }
+
+    .card-body {
+      padding: 10px; /* 모바일 화면에서 카드 본문 여백 줄이기 */
+    }
+
+    .card-btn-container {
+      position: static; /* 버튼 고정 위치 해제 */
+      display: flex;
+      justify-content: space-between; /* 버튼 간 간격을 균등하게 조정 */
+    }
+  }
+</style>
+
 <div class="col-lg-12">
- <div class="row justify-content-center">
-      <div class="col-lg-8">
-              <ul>
-                  <div class="row">
-                      {% for post in paginator.posts %}
-                      <div class="card blog-post">
-                          <img class="card-img-top" src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="{{ post.title }}">
-                          <div class="card-body center">
-                              <!-- <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="author-profile-img"> -->
-                              <h4 class="card-title">{{ post.title }}</h4>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <ul>
+        <div class="row">
+          {% for post in paginator.posts %}
+            <div class="col-md-12">
+              <div class="card blog-post" style="width: 100%; height: auto; display: flex; flex-direction: row; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <img class="card-img-top img-fluid" style="width: 220px; height: auto; object-fit: cover;" src="{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}" alt="{{ post.title }}">
+                <div class="card-body" style="flex-grow: 1; padding: 15px; padding-right: 0px; overflow: visible;">
+                  <h4 class="card-title">{{ post.title }}</h4>
+                  <p class="authors">{{ post.contributors }}</p>
+                  <p class="card-text">{{ post.summary }}</p>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b, %Y" }}</h6>
+                  {% if post.category %}
+                    <p class="category">{{ post.category }}</p>
+                  {% endif %}
+                  <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                </div>
+                <div class="card-btn-container">
+                  {% if post.github_link %}
+                    <a href="{{ post.github_link }}" class="btn btn-link btn-lg card-btn github-btn">GitHub</a>
+                  {% endif %}
+                  {% if post.paper_link %}
+                    <a href="{{ post.paper_link }}" class="btn btn-link btn-lg card-btn paper-btn">Paper</a>
+                  {% endif %}
+                  <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-dark btn-lg card-btn">Read</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </ul>
 
-                              <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
-                              <p class="card-text">{{ post.summary }} </p>
-
-                              <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" class="btn btn-dark btn-lg">Read</a>
-                              <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
-
-                          </div>
-                      </div>
-                      {% endfor %}
-                  </div>
-              </ul>
-
-        <div class="row center">
-          <!-- Pagination links -->
-          {% if paginator.total_pages > 1 %}
-            <ul class="pagination pagination-sm">
-              {% if paginator.previous_page %}
-                <li class="pagination-link"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+      <!-- Pagination -->
+      <div class="row center">
+        {% if paginator.total_pages > 1 %}
+          <ul class="pagination pagination-sm">
+            {% if paginator.previous_page %}
+              <li class="pagination-link"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+            {% else %}
+              <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
+            {% endif %}
+            <li class="pagination-link"><a href="/blog/">First</a></li>
+            {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+                <li class="disabled pagination-link"><span><b>{{ page }}</b></span></li>
               {% else %}
-                <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
-              {% endif %}
-
-              <li class="pagination-link" ><a href="/blog">First</a></li>
-
-              {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-             <li class="disabled pagination-link"><span><b>{{ page }}</b></span></li>
-                {% elsif page == 1 %}
-                  <li class="pagination-link"><a href="/blog">{{ page }}</a></li>
+                {% if page == 1 %}
+                  <li class="pagination-link"><a href="/blog/">{{ page }}</a></li>
                 {% else %}
                   <li class="pagination-link"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                 {% endif %}
-              {% endfor %}
-
-              <li class="pagination-link"><a href="/blog/page/{{ paginator.total_pages }}/#/">Last</a></li>
-
-              {% if paginator.next_page %}
-                <li class="pagination-link"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
-              {% else %}
-                <li class="disabled pagination-link"><span>&raquo;</span></li>
               {% endif %}
-            </ul>
-          {% endif %}
+            {% endfor %}
+            <li class="pagination-link"><a href="/blog/page/{{ paginator.total_pages }}/#/">Last</a></li>
+            {% if paginator.next_page %}
+              <li class="pagination-link"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled pagination-link"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        {% endif %}
       </div>
-
     </div>
-    {%- include blog_sidebar.html -%}
-
- </div>
+  </div>
 </div>
+
+

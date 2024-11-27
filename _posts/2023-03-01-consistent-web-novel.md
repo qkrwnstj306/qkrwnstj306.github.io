@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Added Latex Support"
-summary: Writing Equations using Latex
-author: xplor4r
-date: '2020-10-24 10:35:23 +0530'
-category: jekyll
-thumbnail: /assets/img/posts/code.jpg
-keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes
+title:  "Consistent Web Novel Illustration Generation Project"
+summary: "capston design"
+author: Junseo Park
+contributors: "Junseo Park, Beomseok Ko, Jaehyun Jeong, and Jinseob Han"
+date: '2023-03-01 14:35:23 +0530'
+category: project
+thumbnail: /assets/img/posts/webnovel_1.png
+keywords: diffusion model, image generation, dreambooth, subject fine-tuning
+permalink: /blog/consistent-web-novel/
 usemathjax: true
-permalink: /blog/added-latex-equations-support/
+github_link: "https://github.com/qkrwnstj306/capston_design"
+image: "/assets/img/posts/webnovel_1.png"
 ---
 
 ## You can now use LaTex to write equations :
