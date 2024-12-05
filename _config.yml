@@ -3,7 +3,7 @@ subtitle: A Portfolio Built by Junseo Park # Tab에 마우스 대면, 나오는 
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
-#url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
+url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
 #url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
 baseurl: "" # the subpath of your site, e.g. /blog
 
@@ -30,7 +30,7 @@ author: Junseo Park # Home의 Hi, I am {author}를 의미한다.
 author_bio: "Hi, my name is Junseo Park. I am currently a 3rd-semester master's student in the Computer AI department at Dongguk University, working under the supervision of [Prof. Hyeryung Jang](https://sites.google.com/view/d-ion-lab/home?authuser=0). My research focuses on computer vision, particularly image generation, and I am fascinated by the powerful prior of diffusion models. I am also interested in explainable AI (XAI) and its applications in image editing, style transfer, and optimization." # /about에서의 author 설명
 author_email: "mki730@dgu.ac.kr" # /about
 author_location: Korea # /about
-author_website_url: "https://github.com/qkrwnstj306" # /about
+#author_website_url: "https://github.com/qkrwnstj306" # /about
 typewrite-text: Welcome to my development lab. # home에서의 설명
 hero_cover_img: sample_cover.jpg # /assets/img에 image를 넣어야 한다. cover_img
 
