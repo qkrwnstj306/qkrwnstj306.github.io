@@ -15,28 +15,41 @@ image: "/assets/img/posts/styleforge_1.png"
 ---
 
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<div align="center" style="
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a4a;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #f0f8ff, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  🚀 "Advanced Version of StyleBoost" 🌟
+</div>
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+  
+<p></p>
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
+### Context
 
-{% endhighlight %}
+- StyleForge는 [StyleBoost]({{site.url}}{{site.baseurl}}/blog/styleboost)의 논문의 advanced version이다. 
+  - 더 다양한 실험 제공 (target style, baselines )
+  - Single-StyleForge == StyleBoost
+  - Multi-StyleForge
+  - Heat map을 통한 aux image의 유효성 및 실용성 검증
 
-or
+### Problem
 
-```python
-var a = 1;
-var b = 2;
-function sum (num1,num2){
-  return num1+num2;
-}
-var result = sum(a,b);
-```
+- 
 
+### Proposed Method
+
+- 
+
+
+### Result
+
+- 
