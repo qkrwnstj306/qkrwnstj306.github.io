@@ -1,0 +1,204 @@
+---
+layout: default
+permalink: /proj/
+---
+<style>
+  /* 기본 카드 스타일 */
+  .card-body {
+    display: flex;
+    flex-direction: column; /* 세로로 텍스트와 버튼 배치 */
+    flex-grow: 1; /* 텍스트 영역을 최대화 */
+    padding: 15px;
+    padding-right: 0;
+    overflow: visible; /* 텍스트가 잘리지 않도록 설정 */
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem; /* 카드 제목 크기 증가 */
+    font-weight: bold;
+    margin-bottom: 10px; /* 제목과 본문 간 간격 추가 */
+  }
+
+  .authors {
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px; /* 저자 정보와 본문 간 간격 추가 */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* 카드 본문 크기 증가 */
+    margin-bottom: 15px; /* 본문과 다른 요소 간 간격 */
+  }
+
+  p.authors, p.card-text, h6.card-subtitle {
+    margin-top: 0;
+    margin-bottom: 7px;
+    line-height: 1.5; /* 줄 간격을 넓혀 가독성 개선 */
+  }
+
+  /* 버튼 스타일 */
+  .card-btn-container {
+    display: flex;
+    gap: 10px; /* 버튼 간 간격 */
+    position: absolute; /* 카드 내부에서 고정 위치 */
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .card-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+    height: auto;
+  }
+
+  .github-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+  }
+
+  .github-btn:hover {
+    background-color: #1d72b3;
+  }
+
+  .paper-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem; /* 버튼 크기 증가 */
+  }
+
+  .paper-btn:hover {
+    background-color: #5a6268;
+  }
+
+  .category {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* 반응형 디자인 수정 */
+  @media (max-width: 768px) {
+    .card {
+      display: block; /* 카드가 세로로 배치되도록 변경 */
+      margin-bottom: 20px; /* 카드 간 간격 조정 */
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto; /* 이미지 크기 자동 조정 */
+    }
+
+    .card-body {
+      padding: 10px; /* 모바일 화면에서 카드 본문 여백 줄이기 */
+    }
+
+    .card-btn-container {
+      position: static; /* 버튼 고정 위치 해제 */
+      display: flex;
+      justify-content: space-between; /* 버튼 간 간격을 균등하게 조정 */
+    }
+  }
+</style>
+
+<div class="col-lg-12">
+  <div class="row justify-content-center">
+      <div class="col-lg-8">
+          <ul>
+              <div class="row">
+                  <!-- "project" 카테고리 필터링 -->
+                  {% assign filtered_posts = site.posts | where: "category", "project" %}
+
+                  <!-- 페이지네이션 변수 계산 -->
+                  {% assign total_posts = filtered_posts.size %}
+                  {% assign posts_per_page = 4 %}
+                  {% assign total_pages = total_posts | plus: posts_per_page | divided_by: posts_per_page %}
+                  {% assign current_page = page.url | split: '/page/' | last %}
+                  {% if current_page == page.url %}
+                    {% assign current_page = 1 %}
+                  {% endif %}
+                  {% assign current_page = current_page | plus: 0 %}
+                  {% assign start_index = posts_per_page | times: current_page | minus: posts_per_page %}
+                  {% assign paginated_posts = filtered_posts | slice: start_index, posts_per_page %}
+
+                  
+                  
+                  <!-- 필터링된 포스트 출력 -->
+                  {% for post in paginated_posts %}
+                      <div class="col-md-12">
+                          <div class="card blog-post" style="width: 100%; height: auto; display: flex; flex-direction: row; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                              <img class="card-img-top img-fluid" style="width: 220px; height: auto; object-fit: cover;" src="{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}" alt="{{ post.title }}">
+                              <div class="card-body" style="flex-grow: 1; padding: 15px; padding-right: 0px; overflow: visible;">
+                                  <h4 class="card-title">{{ post.title }}</h4>
+                                  <p class="authors">{{ post.contributors }}</p>
+                                  <p class="card-text">{{ post.summary }}</p>
+                                  <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b, %Y" }}</h6>
+                                  {% if post.category %}
+                                      <p class="category">{{ post.category }}</p>
+                                  {% endif %}
+                              </div>
+                              <div class="card-btn-container">
+                                  {% if post.github_link %}
+                                      <a href="{{ post.github_link }}" class="btn btn-link btn-lg card-btn github-btn">GitHub</a>
+                                  {% endif %}
+                                  {% if post.paper_link %}
+                                      <a href="{{ post.paper_link }}" class="btn btn-link btn-lg card-btn paper-btn">Paper</a>
+                                  {% endif %}
+                                  <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-dark btn-lg card-btn">Read</a>
+                              </div>
+                          </div>
+                      </div>
+                  {% endfor %}
+              </div>
+          </ul>
+
+         <!-- 페이지네이션 -->
+        <div class="row center">
+          {% if total_pages > 1 %}
+            <ul class="pagination pagination-sm">
+              <!-- Previous Link -->
+              {% if current_page > 1 %}
+                <li class="pagination-link">
+                  <a href="{{ site.baseurl }}{% if current_page == 2 %}/proj/{% else %}/proj/page/{{ current_page | minus: 1 }}{% endif %}/">&laquo; Previous</a>
+                </li>
+              {% else %}
+                <li class="pagination-link disabled"><span>&laquo; Previous</span></li>
+              {% endif %}
+
+              <!-- Page Links -->
+              {% for page in (1..total_pages) %}
+                {% if page == 1 %}
+                  {% if current_page == 1 %}
+                    <li class="pagination-link disabled"><span><b>{{ page }}</b></span></li>
+                  {% else %}
+                    <li class="pagination-link">
+                      <a href="{{ site.baseurl }}/proj/">{{ page }}</a>
+                    </li>
+                  {% endif %}
+                {% else %}
+                  {% if page == current_page %}
+                    <li class="pagination-link disabled"><span><b>{{ page }}</b></span></li>
+                  {% else %}
+                    <li class="pagination-link">
+                      <a href="{{ site.baseurl }}/proj/page/{{ page }}/">{{ page }}</a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              <!-- Next Link -->
+              {% if current_page < total_pages %}
+                <li class="pagination-link">
+                  <a href="{{ site.baseurl }}{% if current_page == 1 %}/proj/page/2{% else %}/proj/page/{{ current_page | plus: 1 }}{% endif %}/">Next &raquo;</a>
+                </li>
+              {% else %}
+                <li class="pagination-link disabled"><span>Next &raquo;</span></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+  </div>
+</div>
