@@ -107,9 +107,16 @@ layout: default
     <div class="col-lg-8">
       <ul>
         <div class="row">
-          <!-- "paper" 카테고리에 해당하는 게시글만 필터링 -->
-          {% assign filtered_posts = site.posts | where_exp: "post", "post.category == 'conference' or post.category == 'journal'" %}
+          <!-- "conference or journal" 카테고리에 해당하는 게시글만 필터링 -->
+          {% assign conference_posts = site.posts | where: "category", "conference" %}
+          {% assign journal_posts = site.posts | where: "category", "journal" %}
 
+          {% assign filtered_posts = conference_posts %}
+          {% for post in journal_posts %}
+            {% assign filtered_posts = filtered_posts | push: post %}
+          {% endfor %}
+
+          
           {% assign total_posts = filtered_posts.size %}
           {% assign posts_per_page = site.paginate %}
           {% assign total_pages = total_posts | plus: posts_per_page | divided_by: posts_per_page %}
