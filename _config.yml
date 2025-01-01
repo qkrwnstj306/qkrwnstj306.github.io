@@ -3,8 +3,8 @@ subtitle: A Portfolio Built by Junseo Park # Tab에 마우스 대면, 나오는 
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
-url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
-#url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
+#url: "http://127.0.0.1:4000" # 해당 명령어로 local에서 수정할 때, '''bundle exec jekyll serve --watch''' 이 url을 써야 적용된다.
+url: "https://qkrwnstj306.github.io" # 실제 배포는 이 url로 사용.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
