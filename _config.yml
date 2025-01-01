@@ -13,15 +13,16 @@ urls:
       url: /
     - text: About
       url: /about
-    - text: Blog
+    - text: Publications
       url: /blog
+    - text: Projects
+      url: /proj
     # - text: Gallery
     #   url: /gallery
     # - text: Shop
     #   url : /shop
-    - text: Contact
-      url : /contact
-
+    # - text: Contact
+    #   url : /contact
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
@@ -30,7 +31,7 @@ author: Junseo Park # Home의 Hi, I am {author}를 의미한다.
 author_bio: "Hi, my name is Junseo Park. I am currently a 3rd-semester master's student in the Computer AI department at Dongguk University, working under the supervision of [Prof. Hyeryung Jang](https://sites.google.com/view/d-ion-lab/home?authuser=0). My research focuses on computer vision, particularly image generation, and I am fascinated by the powerful prior of diffusion models. I am also interested in explainable AI (XAI) and its applications in image editing, style transfer, and optimization." # /about에서의 author 설명
 author_email: "mki730@dgu.ac.kr" # /about
 author_location: Korea # /about
-#author_website_url: "https://github.com/qkrwnstj306" # /about
+author_website_url: "https://github.com/qkrwnstj306" # /about
 typewrite-text: Welcome to my development lab. # home에서의 설명
 hero_cover_img: sample_cover.jpg # /assets/img에 image를 넣어야 한다. cover_img
 
@@ -123,6 +124,9 @@ paginate: 4
 per_page: 4
 paginate_path: "/blog/page/:num/"
 
+# Proj pagination settings
+proj_paginate: 4
+proj_per_page: 4
 # minify
 # compress_html:
 #   clippings: all
