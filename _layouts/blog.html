@@ -108,7 +108,7 @@ layout: default
       <ul>
         <div class="row">
           <!-- "paper" 카테고리에 해당하는 게시글만 필터링 -->
-          {% assign filtered_posts = site.posts | where: "category", "paper" %}
+          {% assign filtered_posts = site.posts | where_exp: "post", "post.category == 'conference' or post.category == 'journal'" %}
 
           {% assign total_posts = filtered_posts.size %}
           {% assign posts_per_page = site.paginate %}
