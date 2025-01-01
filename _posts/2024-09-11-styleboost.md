@@ -3,9 +3,9 @@ layout: post
 title:  "StyleBoost: A Study of Personalizing Text-to-Image Generation in Any Style using DreamBooth"
 summary: "International Conference on Information and Communication Technology Convergence (ICTC), 2023"
 author: Junseo Park
-contributors: "<span style='font-weight: bold; color: #ff5733;'>Junseo Park</span>, Beomseok Ko, and Hyeryung Jang"
+contributors: "Junseo Park, Beomseok Ko, and Hyeryung Jang"
 date: '2023-09-11 14:35:23 +0530'
-category: conference
+category: paper
 thumbnail: /assets/img/posts/styleboost_1.png
 keywords: diffusion model, style training, dreambooth
 permalink: /blog/styleboost

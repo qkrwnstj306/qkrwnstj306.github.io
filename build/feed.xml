@@ -5,8 +5,8 @@
     <description>devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Jan 2025 14:54:14 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Jan 2025 14:54:14 +0900</lastBuildDate>
+    <pubDate>Wed, 01 Jan 2025 15:31:26 +0900</pubDate>
+    <lastBuildDate>Wed, 01 Jan 2025 15:31:26 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
 
     
@@ -31,81 +31,26 @@
 &lt;h3 id=&quot;context&quot;&gt;Context&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Large-scale diffusion models have achieved significant advancements in image generation, particularly through cross-attention mechanisms.&lt;/li&gt;
-  &lt;li&gt;While cross-attention has been extensively studied in text-to-image tasks &lt;em&gt;(e.g., DAAM)&lt;/em&gt;, its interpretability in image-to-image (I2I) diffusion models remains underexplored. To address this, we introduce Image-to-Image Attribution Maps ($\text{I}^{2}\text{AM}$).&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The interpretability of I2I diffusion models is insufficiently explored.&lt;/li&gt;
-  &lt;li&gt;Applying text-to-image attribution/attention methods to I2I models often results in uninterpretable maps due to the contextual continuity of reference images &lt;em&gt;(vs. DAAM)&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;proposed-method&quot;&gt;Proposed Method&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;We propose a bidirectional attribution analysis guided by two key research questions:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Q1&lt;/strong&gt;: “Which regions of the generated image are most influenced by the reference image?” — exploring how the model utilizes the reference image during generation.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Q2&lt;/strong&gt;: “Which parts of the reference image contribute most to the generated image?” — assessing how well the model captures and transfers critical details from the input.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_2.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$\text{I}^{2}\text{AM}$ aggregates cross-attention scores across time steps, attention heads, and layers to provide insights into feature transfer between images:
-    &lt;ul&gt;
-      &lt;li&gt;ULAM (Unified-Level Attribution Map): Integrates time, head, and layer scores to reveal overall trends.&lt;/li&gt;
-      &lt;li&gt;TLAM (Time-Level Attribution Map): Tracks image generation processes over time.&lt;/li&gt;
-      &lt;li&gt;HLAM (Head-Level Attribution Map): Analyzes attention score distributions across heads, highlighting diverse information capture.&lt;/li&gt;
-      &lt;li&gt;LLAM (Layer-Level Attribution Map): Explains how input features are processed and transformed at each layer, guiding model performance improvement.&lt;/li&gt;
-      &lt;li&gt;SRAM (Specific-Reference Attribution Map): Highlights regions in the reference image contributing to specific patches in the generated image.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;result&quot;&gt;Result&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The top attribution map shows how different areas of the generated image are influenced by the reference image &lt;strong&gt;(Q1)&lt;/strong&gt;. Conversely, the bottom map demonstrates how different regions of the reference image contribute to the generation process &lt;strong&gt;(Q2)&lt;/strong&gt;, and the right map illustrates which reference information was extracted during the generation of that cell.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_1.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$\text{I}^{2}\text{AM}$ demonstrates effectiveness across object detection, inpainting, and super-resolution tasks, successfully identifying key regions critical to output generation even in complex scenes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_3.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_4.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We also introduce the &lt;strong&gt;Inpainting Mask Attention Consistency Score (IMACS)&lt;/strong&gt;, a novel metric that evaluates alignment between attribution maps and inpainting masks, showing strong correlation with existing performance metrics.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_5.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Extensive experiments validate that $\text{I}^{2}\text{AM}$ supports model debugging and refinement, enhancing both the performance and interpretability of I2I models.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/i2am_6.png&quot; /&gt;
-&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Oct 2024 18:05:23 +0900</pubDate>
         <link>http://localhost:4000/blog/i2am/</link>
@@ -133,64 +78,33 @@
 &lt;h3 id=&quot;context&quot;&gt;Context&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Recent advancements in text-to-image models, such as Stable Diffusion, have demonstrated the ability to generate visual images from natural language prompts.&lt;/li&gt;
-  &lt;li&gt;This progress has also driven the development of personalization techniques for binding user inputs (e.g., images) to prompts, including methods like DreamBooth, Textual Inversion, and LoRA.&lt;/li&gt;
-  &lt;li&gt;However, these approaches struggle to capture arbitrary artistic styles due to the abstract and multifaceted nature of stylistic attributes.&lt;/li&gt;
-  &lt;li&gt;To reliably learn target styles, StyleBoost (equivalent to Single-StyleForge in this paper) proposes dual binding. It uses $15 – 20$ target style images to bind them to a unique token identifier while leveraging auxiliary images to ensure consistent representation of critical elements like people within the target style.&lt;/li&gt;
-  &lt;li&gt;StyleForge is an advanced version of &lt;a href=&quot;http://localhost:4000/blog/styleboost&quot;&gt;StyleBoost&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Improvements in StyleForge over StyleBoost:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Validation of auxiliary images through heat maps, ensuring effectiveness and practicality.&lt;/li&gt;
-  &lt;li&gt;Introduction of Multi-StyleForge: instead of using a single unique token, it binds target and auxiliary images to multiple tokens, separating components like people and backgrounds.&lt;/li&gt;
-  &lt;li&gt;Broader experiments covering more target styles and baselines.&lt;/li&gt;
+  &lt;li&gt;StyleForge는 &lt;a href=&quot;http://localhost:4000/blog/styleboost&quot;&gt;StyleBoost&lt;/a&gt;의 논문의 advanced version이다.
+    &lt;ul&gt;
+      &lt;li&gt;더 다양한 실험 제공 (target style, baselines )&lt;/li&gt;
+      &lt;li&gt;Single-StyleForge == StyleBoost&lt;/li&gt;
+      &lt;li&gt;Multi-StyleForge&lt;/li&gt;
+      &lt;li&gt;Heat map을 통한 aux image의 유효성 및 실용성 검증&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;StyleBoost (or Single-StyleBoost)&lt;/strong&gt; was proposed as a method to learn artistic styles, ensuring faithful image generation. However, it was found to lack strong text-image alignment capabilities.&lt;/li&gt;
-  &lt;li&gt;This paper introduces &lt;strong&gt;Multi-StyleForge&lt;/strong&gt;, which improves text-image alignment while maintaining high image quality.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;proposed-method&quot;&gt;Proposed Method&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;While Single-StyleForge focuses on learning a comprehensive representation of the target style, Multi-StyleForge enhances this by dividing stylistic attributes into distinct components. This improves alignment between text prompts and generated images, especially for complex styles involving both backgrounds and people.&lt;/li&gt;
-  &lt;li&gt;Multi-StyleForge builds upon Single-StyleForge by mapping each stylistic component to a unique identifier.&lt;/li&gt;
-  &lt;li&gt;Single-StyleForge maps StyleRef images to a single prompt &lt;em&gt;(e.g., “[V] style”)&lt;/em&gt;, which often results in unintended inclusion of people in images when prompts lack person-related descriptions. Multi-StyleForge addresses this by introducing two StyleRef prompts &lt;em&gt;(e.g., “[V] style” for people and “[W] style” for backgrounds)&lt;/em&gt;, training the model more effectively and reducing ambiguity.&lt;/li&gt;
-  &lt;li&gt;StyleRef images follow the Single-StyleForge structure, dividing target style elements into two parts: people and backgrounds. Each component is linked to a specific prompt &lt;em&gt;(e.g., “[V] style” for people, “[W] style” for backgrounds)&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;As a result, Multi-StyleForge trains the model to distinguish stylistic features (people and backgrounds) and achieve separate embeddings.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;result&quot;&gt;Result&lt;/h3&gt;
 
-&lt;p&gt;$\textbf{Experimental setting}$&lt;/p&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Target styles&lt;/strong&gt;: Realism, SureB, Anime, Romanticism, Cubism, and Pixel-art&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Baselines&lt;/strong&gt;: DreamBooth, Textual Inversion, LoRA, and Custom Diffusion&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Eval metrics&lt;/strong&gt;: FID, KID, and CLIP scores&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Attention maps for “[V]” and “style” tokens in the prompt: “[V]” focuses on a broader area, while “style” focuses on people, aligning with the design intent.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/styleforge_3.png&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;$\textbf{Main result}$&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Quantitative comparisons with FID, KID ($\times 10^3$), and CLIP scores. The table presents FID scores for realism, SureB, and anime styles, along with
-KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for all styles. The best and second-best results are indicated in bold and underline ,respectively.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/posts/styleforge_2.png&quot; /&gt;
-&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Sep 2024 18:05:23 +0900</pubDate>
         <link>http://localhost:4000/blog/styleforge/</link>
@@ -263,8 +177,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 01 Mar 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4000/proj/realtime/</link>
-        <guid isPermaLink="true">http://localhost:4000/proj/realtime/</guid>
+        <link>http://localhost:4000/blog/realtime/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/realtime/</guid>
       </item>
     
       <item>
@@ -389,8 +303,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 01 Mar 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4000/proj/robustqa/</link>
-        <guid isPermaLink="true">http://localhost:4000/proj/robustqa/</guid>
+        <link>http://localhost:4000/blog/robustqa/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/robustqa/</guid>
       </item>
     
       <item>
@@ -864,8 +778,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Mar 2023 18:05:23 +0900</pubDate>
-        <link>http://localhost:4000/proj/consistent-web-novel/</link>
-        <guid isPermaLink="true">http://localhost:4000/proj/consistent-web-novel/</guid>
+        <link>http://localhost:4000/blog/consistent-web-novel/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/consistent-web-novel/</guid>
       </item>
     
 
@@ -891,13 +805,13 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
     &lt;a name=&quot;project&quot;&gt;&lt;/a&gt;
      
     &lt;article class=&quot;center&quot;&gt;
-      &lt;h6&gt;&lt;a href=&quot;/proj/realtime/&quot;&gt;Real-Time Text-to-Image synthesis with LCM-LoRA&lt;/a&gt;&lt;/h6&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/realtime/&quot;&gt;Real-Time Text-to-Image synthesis with LCM-LoRA&lt;/a&gt;&lt;/h6&gt;
     &lt;/article&gt;
 
 
     
     &lt;article class=&quot;center&quot;&gt;
-      &lt;h6&gt;&lt;a href=&quot;/proj/robustqa/&quot;&gt;Robust-QA using DistilBERT&lt;/a&gt;&lt;/h6&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/robustqa/&quot;&gt;Robust-QA using DistilBERT&lt;/a&gt;&lt;/h6&gt;
     &lt;/article&gt;
 
 
@@ -909,7 +823,7 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 
     
     &lt;article class=&quot;center&quot;&gt;
-      &lt;h6&gt;&lt;a href=&quot;/proj/consistent-web-novel/&quot;&gt;Consistent Web Novel Illustration Generation Project&lt;/a&gt;&lt;/h6&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/consistent-web-novel/&quot;&gt;Consistent Web Novel Illustration Generation Project&lt;/a&gt;&lt;/h6&gt;
     &lt;/article&gt;
 
 
@@ -919,12 +833,18 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 
   &lt;div class=&quot;category-box&quot;&gt;
     
-    &lt;div id=&quot;#conference&quot;&gt;&lt;/div&gt;
-    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/conference&quot;&gt;conference&lt;/a&gt;&lt;/h4&gt;
-    &lt;a name=&quot;conference&quot;&gt;&lt;/a&gt;
+    &lt;div id=&quot;#paper&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/paper&quot;&gt;paper&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;paper&quot;&gt;&lt;/a&gt;
      
     &lt;article class=&quot;center&quot;&gt;
       &lt;h6&gt;&lt;a href=&quot;/blog/i2am/&quot;&gt;I2AM: Interpreting Image-to-Image Latent Diffusion Models via Bi-Attribution Maps&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/styleforge/&quot;&gt;StyleForge: Enhancing Text-to-Image Synthesis for Any Artistic Styles with Dual Binding&lt;/a&gt;&lt;/h6&gt;
     &lt;/article&gt;
 
 
@@ -938,27 +858,14 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 
   &lt;/div&gt;
 
-  &lt;div class=&quot;category-box&quot;&gt;
-    
-    &lt;div id=&quot;#journal&quot;&gt;&lt;/div&gt;
-    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/journal&quot;&gt;journal&lt;/a&gt;&lt;/h4&gt;
-    &lt;a name=&quot;journal&quot;&gt;&lt;/a&gt;
-     
-    &lt;article class=&quot;center&quot;&gt;
-      &lt;h6&gt;&lt;a href=&quot;/blog/styleforge/&quot;&gt;StyleForge: Enhancing Text-to-Image Synthesis for Any Artistic Styles with Dual Binding&lt;/a&gt;&lt;/h6&gt;
-    &lt;/article&gt;
-
-
-    
-
-  &lt;/div&gt;
-
 &lt;/div&gt;
 
 </description>
             <link>http://localhost:4000/blog/categories/</link>
           </item>
         
+      
+    
       
     
       
@@ -1206,6 +1113,18 @@ You can visit the blog using [http://your-github-username.github.io](http://your
         
       
     
+      
+    
+      
+        
+          <item>
+            <title>Our Sponsors</title>
+            <description>Thanks to all the amazing contributors and our Backers for the support.
+
+- [Dirish Mohan](https://dirishmohan.com)</description>
+            <link>http://localhost:4000/sponsors/</link>
+          </item>
+        
       
     
       

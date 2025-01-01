@@ -107,21 +107,7 @@ layout: default
     <div class="col-lg-8">
       <ul>
         <div class="row">
-          <!-- "paper" 카테고리에 해당하는 게시글만 필터링 -->
-          {% assign filtered_posts = site.posts | where_exp: "post", "post.category == 'conference' or post.category == 'journal'" %}
-
-          {% assign total_posts = filtered_posts.size %}
-          {% assign posts_per_page = site.paginate %}
-          {% assign total_pages = total_posts | plus: posts_per_page | divided_by: posts_per_page %}
-          {% assign current_page = page.url | split: '/page/' | last %}
-          {% if current_page == page.url %}
-            {% assign current_page = 1 %}
-          {% endif %}
-          {% assign current_page = current_page | plus: 0 %}
-          {% assign start_index = posts_per_page | times: current_page | minus: posts_per_page %}
-          {% assign paginated_posts = filtered_posts | slice: start_index, posts_per_page %}
-          <!-- 페이지네이션된 게시글 출력 -->
-          {% for post in paginated_posts %}
+          {% for post in paginator.posts %}
             <div class="col-md-12">
               <div class="card blog-post" style="width: 100%; height: auto; display: flex; flex-direction: row; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
                 <img class="card-img-top img-fluid" style="width: 220px; height: auto; object-fit: cover;" src="{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}" alt="{{ post.title }}">
@@ -149,53 +135,39 @@ layout: default
           {% endfor %}
         </div>
       </ul>
-      
-      <!-- 페이지네이션 -->
-      <div class="row center">
-        {% if total_pages > 1 %}
-          <ul class="pagination pagination-sm">
-            <!-- Previous Link -->
-            {% if current_page > 1 %}
-              <li class="pagination-link">
-                <a href="{{ site.baseurl }}{% if current_page == 2 %}/blog/{% else %}/blog/page/{{ current_page | minus: 1 }}{% endif %}/">&laquo; Previous</a>
-              </li>
-            {% else %}
-              <li class="pagination-link disabled"><span>&laquo; Previous</span></li>
-            {% endif %}
 
-            <!-- Page Links -->
-            {% for page in (1..total_pages) %}
-              {% if page == 1 %}
-                {% if current_page == 1 %}
-                  <li class="pagination-link disabled"><span><b>{{ page }}</b></span></li>
-                {% else %}
-                  <li class="pagination-link">
-                    <a href="{{ site.baseurl }}/blog/">{{ page }}</a>
-                  </li>
-                {% endif %}
+      <!-- Pagination -->
+      <div class="row center">
+        {% if paginator.total_pages > 1 %}
+          <ul class="pagination pagination-sm">
+            {% if paginator.previous_page %}
+              <li class="pagination-link"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+            {% else %}
+              <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
+            {% endif %}
+            <li class="pagination-link"><a href="/blog/">First</a></li>
+            {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+                <li class="disabled pagination-link"><span><b>{{ page }}</b></span></li>
               {% else %}
-                {% if page == current_page %}
-                  <li class="pagination-link disabled"><span><b>{{ page }}</b></span></li>
+                {% if page == 1 %}
+                  <li class="pagination-link"><a href="/blog/">{{ page }}</a></li>
                 {% else %}
-                  <li class="pagination-link">
-                    <a href="{{ site.baseurl }}/blog/page/{{ page }}/">{{ page }}</a>
-                  </li>
+                  <li class="pagination-link"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                 {% endif %}
               {% endif %}
             {% endfor %}
-
-            <!-- Next Link -->
-            {% if current_page < total_pages %}
-              <li class="pagination-link">
-                <a href="{{ site.baseurl }}{% if current_page == 1 %}/blog/page/2{% else %}/blog/page/{{ current_page | plus: 1 }}{% endif %}/">Next &raquo;</a>
-              </li>
+            <li class="pagination-link"><a href="/blog/page/{{ paginator.total_pages }}/#/">Last</a></li>
+            {% if paginator.next_page %}
+              <li class="pagination-link"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
             {% else %}
-              <li class="pagination-link disabled"><span>Next &raquo;</span></li>
+              <li class="disabled pagination-link"><span>&raquo;</span></li>
             {% endif %}
           </ul>
         {% endif %}
       </div>
-
     </div>
   </div>
 </div>
+
+
