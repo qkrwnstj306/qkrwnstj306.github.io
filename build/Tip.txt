@@ -1,0 +1,2 @@
+Home과 About에 관한 내용은 _config.yml에 대부분있다. 
+About의 Skills는 _includes > author_skills.html에 있다.
