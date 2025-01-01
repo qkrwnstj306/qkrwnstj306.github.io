@@ -113,11 +113,16 @@ layout: default
           {% assign total_posts = filtered_posts.size %}
           {% assign posts_per_page = site.paginate %}
           {% assign total_pages = total_posts | plus: posts_per_page | divided_by: posts_per_page %}
-          {% assign current_page = page.url | split: '/page/' | last %}
-          {% if current_page == page.url %}
+          
+          <!-- current_page 계산 -->
+          {% assign current_page_parts = page.url | split: '/page/' %}
+          {% if current_page_parts.size > 1 %}
+            {% assign current_page = current_page_parts.last %}
+          {% else %}
             {% assign current_page = 1 %}
           {% endif %}
           {% assign current_page = current_page | plus: 0 %}
+
           {% assign start_index = posts_per_page | times: current_page | minus: posts_per_page %}
           {% assign paginated_posts = filtered_posts | slice: start_index, posts_per_page %}
           <!-- 페이지네이션된 게시글 출력 -->
