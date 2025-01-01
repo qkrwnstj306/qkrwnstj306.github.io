@@ -54,14 +54,14 @@ author_work_experiences:
 author_education_details:
               - college_logo: dongguk_university.jpg
                 college_name: Dongguk University
-                college_url: https://www.dongguk.edu/main
-                college_degree: M.S. in Computer AI (Artificial Intelligence)
+                college_url: https://aix.dongguk.edu
+                college_degree: "M.S. in Computer·AI (Artificial Intelligence) (GPA: 4.50 / 4.50)"
                 description: 2023.09 - Expected 2025.09
                 visibility: true
               - college_logo: dongguk_university.jpg
                 college_name: Dongguk University
-                college_url: https://www.dongguk.edu/main
-                college_degree: B.E. in Information and Communication Engineering.
+                college_url: https://ice.dongguk.edu
+                college_degree: "B.E. in Information and Communication Engineering. (GPA: 4.21 / 4.50)"
                 description: 2018.03 - 2023.09
                 visibility: true
 
