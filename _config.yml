@@ -29,7 +29,7 @@ urls:
 author_logo: author_img1.jpg # home, /about에서의 author image
 author: Junseo Park # Home의 Hi, I am {author}를 의미한다.
 author_bio: "Hi, my name is Junseo Park. I am currently a 3rd-semester master's student in the Computer AI department at Dongguk University, working under the supervision of [Prof. Hyeryung Jang](https://sites.google.com/view/d-ion-lab/home?authuser=0). My research focuses on computer vision, particularly image generation, and I am fascinated by the powerful prior of diffusion models. I am also interested in explainable AI (XAI) and its applications in image editing, style transfer, and optimization." # /about에서의 author 설명
-author_email: "mki730@dgu.ac.kr" # /about
+author_email: "Anonymous email" #"mki730@dgu.ac.kr" # /about
 author_location: Korea # /about
 author_website_url: "https://github.com/qkrwnstj306" # /about
 typewrite-text: Welcome to my development lab. # home에서의 설명
@@ -103,7 +103,7 @@ wakatime_username: qkrwnstj306
 
 # contact form - (choose formspress or getform)
 # getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: mki730@dgu.ac.kr
+formspree_email: Anonymous email #mki730@dgu.ac.kr
 
 # releases - widget can be (sidebar, modal or embed)
 olvy_organization: devlopr
