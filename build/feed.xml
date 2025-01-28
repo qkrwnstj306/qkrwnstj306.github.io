@@ -3,10 +3,10 @@
   <channel>
     <title>Junseo Park</title>
     <description>devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.</description>
-    <link>http://localhost:4001/</link>
-    <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Jan 2025 16:57:00 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Jan 2025 16:57:00 +0900</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 28 Jan 2025 18:38:13 +0900</pubDate>
+    <lastBuildDate>Tue, 28 Jan 2025 18:38:13 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
 
     
@@ -108,8 +108,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Oct 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/blog/i2am/</link>
-        <guid isPermaLink="true">http://localhost:4001/blog/i2am/</guid>
+        <link>http://localhost:4000/blog/i2am/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/i2am/</guid>
       </item>
     
       <item>
@@ -137,7 +137,7 @@
   &lt;li&gt;This progress has also driven the development of personalization techniques for binding user inputs (e.g., images) to prompts, including methods like DreamBooth, Textual Inversion, and LoRA.&lt;/li&gt;
   &lt;li&gt;However, these approaches struggle to capture arbitrary artistic styles due to the abstract and multifaceted nature of stylistic attributes.&lt;/li&gt;
   &lt;li&gt;To reliably learn target styles, StyleBoost (equivalent to Single-StyleForge in this paper) proposes dual binding. It uses $15 – 20$ target style images to bind them to a unique token identifier while leveraging auxiliary images to ensure consistent representation of critical elements like people within the target style.&lt;/li&gt;
-  &lt;li&gt;StyleForge is an advanced version of &lt;a href=&quot;http://localhost:4001/blog/styleboost&quot;&gt;StyleBoost&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;StyleForge is an advanced version of &lt;a href=&quot;http://localhost:4000/blog/styleboost&quot;&gt;StyleBoost&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Improvements in StyleForge over StyleBoost:&lt;/strong&gt;&lt;/p&gt;
@@ -193,8 +193,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Sep 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/blog/styleforge/</link>
-        <guid isPermaLink="true">http://localhost:4001/blog/styleforge/</guid>
+        <link>http://localhost:4000/blog/styleforge/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/styleforge/</guid>
       </item>
     
       <item>
@@ -263,8 +263,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 01 Mar 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/proj/realtime/</link>
-        <guid isPermaLink="true">http://localhost:4001/proj/realtime/</guid>
+        <link>http://localhost:4000/proj/realtime/</link>
+        <guid isPermaLink="true">http://localhost:4000/proj/realtime/</guid>
       </item>
     
       <item>
@@ -389,8 +389,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 01 Mar 2024 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/proj/robustqa/</link>
-        <guid isPermaLink="true">http://localhost:4001/proj/robustqa/</guid>
+        <link>http://localhost:4000/proj/robustqa/</link>
+        <guid isPermaLink="true">http://localhost:4000/proj/robustqa/</guid>
       </item>
     
       <item>
@@ -492,8 +492,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Sep 2023 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/blog/styleboost</link>
-        <guid isPermaLink="true">http://localhost:4001/blog/styleboost</guid>
+        <link>http://localhost:4000/blog/styleboost</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/styleboost</guid>
       </item>
     
       <item>
@@ -754,8 +754,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/table&gt;
 </description>
         <pubDate>Sat, 17 Jun 2023 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/proj/rl/</link>
-        <guid isPermaLink="true">http://localhost:4001/proj/rl/</guid>
+        <link>http://localhost:4000/proj/rl/</link>
+        <guid isPermaLink="true">http://localhost:4000/proj/rl/</guid>
       </item>
     
       <item>
@@ -864,8 +864,8 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Mar 2023 18:05:23 +0900</pubDate>
-        <link>http://localhost:4001/proj/consistent-web-novel/</link>
-        <guid isPermaLink="true">http://localhost:4001/proj/consistent-web-novel/</guid>
+        <link>http://localhost:4000/proj/consistent-web-novel/</link>
+        <guid isPermaLink="true">http://localhost:4000/proj/consistent-web-novel/</guid>
       </item>
     
 
@@ -956,7 +956,7 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
 &lt;/div&gt;
 
 </description>
-            <link>http://localhost:4001/blog/categories/</link>
+            <link>http://localhost:4000/blog/categories/</link>
           </item>
         
       
@@ -976,7 +976,7 @@ KID scores for romanticism, cubism, and pixel-art styles, and CLIP scores for al
  &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
 {% endfor %}
 &lt;/div&gt;</description>
-            <link>http://localhost:4001/blog/categories/guides/</link>
+            <link>http://localhost:4000/blog/categories/guides/</link>
           </item>
         
       
@@ -1167,7 +1167,7 @@ Visit your Github Repo settings ! Enable master branch as Github Pages Branch :
 You can visit the blog using [http://your-github-username.github.io](http://your-github-username.github.io).
 
 </description>
-            <link>http://localhost:4001/get-started/</link>
+            <link>http://localhost:4000/get-started/</link>
           </item>
         
       
@@ -1183,7 +1183,7 @@ You can visit the blog using [http://your-github-username.github.io](http://your
  &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
 {% endfor %}
 &lt;/div&gt;</description>
-            <link>http://localhost:4001/blog/categories/jekyll/</link>
+            <link>http://localhost:4000/blog/categories/jekyll/</link>
           </item>
         
       
@@ -1203,7 +1203,7 @@ You can visit the blog using [http://your-github-username.github.io](http://your
  &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
 {% endfor %}
 &lt;/div&gt;</description>
-            <link>http://localhost:4001/blog/categories/sample_category/</link>
+            <link>http://localhost:4000/blog/categories/sample_category/</link>
           </item>
         
       
@@ -1217,7 +1217,7 @@ You can visit the blog using [http://your-github-username.github.io](http://your
             <description>Thanks to all the amazing contributors and our Backers for the support.
 
 - [Dirish Mohan](https://dirishmohan.com)</description>
-            <link>http://localhost:4001/sponsors/</link>
+            <link>http://localhost:4000/sponsors/</link>
           </item>
         
       
@@ -1427,7 +1427,7 @@ You can visit the blog using [http://your-github-username.github.io](http://your
 
 
 </description>
-            <link>http://localhost:4001/styleguide/</link>
+            <link>http://localhost:4000/styleguide/</link>
           </item>
         
       
