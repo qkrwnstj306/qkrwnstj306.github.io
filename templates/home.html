@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block main %}
+
+<section class="hero" id="about">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ p.role }} · {{ p.affiliation }}</p>
+      <h1>{{ p.name }}</h1>
+      <p class="headline">{{ p.headline }}</p>
+      <div class="bio">{{ p.bio_html }}</div>
+      <ul class="chips" aria-label="Research interests">
+        {% for i in p.interests %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:{{ p.email }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>Email
+        </a>
+        <a class="btn" href="{{ p.github }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub
+        </a>
+        <a class="btn" href="{{ p.notes }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M18 20h2V7"/><path d="M8 8h6M8 12h6"/></svg>Paper Notes
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/{{ p.photo }}" alt="Photo of {{ p.name }}" width="280" height="280">
+      <div class="hero-meta">
+        <span>{{ p.lab }}, advised by <a href="{{ p.advisor_url }}">{{ p.advisor }}</a></span>
+        <span>{{ p.location }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap highlights" aria-label="Highlights">
+  {% for h in highlights %}
+  <div class="highlight"><b>{{ h.value }}</b><span>{{ h.label }}</span></div>
+  {% endfor %}
+</section>
+
+<section class="wrap section" id="news">
+  <h2>News</h2>
+  <ol class="news">
+    {% for n in news %}
+    <li><time>{{ n.date }}</time><span>{{ n.html }}</span></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="wrap section" id="publications">
+  <h2>Publications</h2>
+  <div class="pubs">
+    {% for pub in publications %}
+    <article class="pub">
+      <a class="pub-thumb" href="/{{ pub.page }}/"><img src="/{{ pub.thumbnail }}" alt="" loading="lazy"></a>
+      <div class="pub-body">
+        <div class="pub-badges">
+          <span class="badge badge-venue">{{ pub.venue }}</span>
+          <span class="badge">{{ pub.type }}</span>
+        </div>
+        <h3><a href="/{{ pub.page }}/">{{ pub.title }}</a></h3>
+        <p class="authors">{{ pub.authors_html }}</p>
+        <p class="venue-full">{{ pub.venue_full }}</p>
+        <p class="tldr">{{ pub.tldr }}</p>
+        <div class="links">
+          {% for l in pub.links %}<a class="link" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+          <a class="link link-more" href="/{{ pub.page }}/">Details →</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% if under_review %}
+  <div class="under-review">
+    <span class="badge badge-review">Under review</span>
+    <span>{{ under_review_total }} papers currently under review —
+      {% for u in under_review %}{{ u.venue }}{% if u.count > 1 %} ×{{ u.count }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}.</span>
+  </div>
+  {% endif %}
+</section>
+
+<section class="wrap section" id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    {% for pr in projects %}
+    <article class="project">
+      <a class="project-thumb" href="/{{ pr.page }}/"><img src="/{{ pr.thumbnail }}" alt="" loading="lazy"></a>
+      <div class="project-body">
+        <p class="period">{{ pr.period }}</p>
+        <h3><a href="/{{ pr.page }}/">{{ pr.title }}</a></h3>
+        <p>{{ pr.summary }}</p>
+        {% if pr.role %}<p class="role">Role: {{ pr.role }}</p>{% endif %}
+        <ul class="tags">{% for t in pr.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+        <div class="links">
+          <a class="link" href="{{ pr.github }}">GitHub</a>
+          <a class="link link-more" href="/{{ pr.page }}/">Details →</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section two-col" id="education">
+  <div>
+    <h2>Education</h2>
+    <ol class="edu">
+      {% for e in education %}
+      <li>
+        <img src="/{{ e.logo }}" alt="" width="44" height="44">
+        <div>
+          <b>{{ e.degree }}</b>
+          <span>{{ e.school }} · {{ e.period }}</span>
+          {% if e.detail %}<span class="muted">{{ e.detail }}</span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div>
+    <h2>Skills</h2>
+    <dl class="skills">
+      {% for s in skills %}
+      <dt>{{ s.group }}</dt>
+      <dd>{% for i in s['items'] %}<span>{{ i }}</span>{% endfor %}</dd>
+      {% endfor %}
+    </dl>
+    <a class="notes-card" href="{{ p.notes }}">
+      <b>Theory — my paper notes</b>
+      <span>115 paper reviews across 20 research fields, plus theory notes and lecture summaries.</span>
+      <span class="link-more">Open the notes →</span>
+    </a>
+  </div>
+</section>
+
+<section class="wrap section contact" id="contact">
+  <h2>Contact</h2>
+  <p>I am happy to talk about research collaborations and opportunities.</p>
+  <a class="btn btn-primary" href="mailto:{{ p.email }}">{{ p.email }}</a>
+</section>
+
+{% endblock %}

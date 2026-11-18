@@ -1,0 +1,155 @@
+# =============================================================================
+#  content.yml — everything shown on https://qkrwnstj306.github.io/
+#
+#  Edit this file, then preview locally:
+#      python scripts/build.py serve      # http://127.0.0.1:8000
+#  Pushing to main rebuilds and deploys the site (GitHub Actions).
+#
+#  Detail pages for publications/projects live in pages/<slug>.md.
+#  Images live in assets/img/ (thumbnails + figures in assets/img/posts/).
+# =============================================================================
+
+profile:
+  name: Junseo Park
+  role: Ph.D. Student in Computer Science & AI
+  affiliation: Dongguk University
+  advisor: Prof. Hyeryung Jang
+  advisor_url: https://sites.google.com/view/d-ion-lab/home
+  lab: D-ION Lab
+  location: Seoul, Korea
+  photo: assets/img/author_img1.jpg
+  email: mki730@dgu.ac.kr
+  github: https://github.com/qkrwnstj306
+  notes: https://qkrwnstj306.github.io/Theory/
+  headline: I study how diffusion models generate images — and how to make them controllable and interpretable.
+  bio: >-
+    I am a Ph.D. student at Dongguk University, advised by
+    [Prof. Hyeryung Jang](https://sites.google.com/view/d-ion-lab/home).
+    My research focuses on computer vision, particularly **image generation with diffusion models**.
+    I am fascinated by the powerful prior of large diffusion models and work on
+    **explainable AI (XAI)** for generative models and its applications to **image editing,
+    style personalization, and optimization**.
+  interests:
+    - Diffusion Models
+    - Explainable AI
+    - Image Editing
+    - Style Personalization
+
+highlights:
+  - value: ICLR 2025
+    label: First-author paper (I2AM)
+  - value: "3"
+    label: Papers under review (CVPR ×2, ACM TOMM)
+  - value: "4.50 / 4.50"
+    label: M.S. GPA
+  - value: "115"
+    label: Paper reviews in my notes
+
+news:
+  - date: "2025.09"
+    text: Our paper **StyleForge** was published in *Applied Sciences* (MDPI).
+  - date: "2025.09"
+    text: Started my **Ph.D.** at Dongguk University (advisor Prof. Hyeryung Jang).
+  - date: "2025.01"
+    text: "**I2AM** was accepted to **ICLR 2025**."
+  - date: "2023.10"
+    text: Presented **StyleBoost** at **ICTC 2023**.
+
+publications:
+  - title: "I2AM: Interpreting Image-to-Image Latent Diffusion Models via Bi-Attribution Maps"
+    authors: Junseo Park and Hyeryung Jang
+    venue: ICLR 2025
+    venue_full: The Thirteenth International Conference on Learning Representations (ICLR), 2025
+    type: Conference
+    thumbnail: assets/img/posts/i2am_1.png
+    tldr: Bidirectional attribution maps that explain how image-to-image diffusion models transfer information from the reference image to the generated image.
+    page: blog/i2am
+    links:
+      - { label: Paper, url: "https://openreview.net/forum?id=bBNUiErs26" }
+      - { label: Poster, url: "https://github.com/qkrwnstj306/Theory/blob/main/research/i2am/i2am-iclr-poster.pdf" }
+  - title: "StyleForge: Enhancing Text-to-Image Synthesis for Any Artistic Styles with Dual Binding"
+    authors: Junseo Park, Beomseok Ko, and Hyeryung Jang
+    venue: Applied Sciences 2025
+    venue_full: Applied Sciences (MDPI), vol. 15, no. 19, 10623, 2025
+    type: Journal
+    thumbnail: assets/img/posts/styleforge_1.png
+    tldr: Dual binding with multiple style tokens learns any artistic style from 15–20 images while improving text–image alignment.
+    page: blog/styleforge
+    links:
+      - { label: Paper, url: "https://doi.org/10.3390/app151910623" }
+      - { label: arXiv, url: "https://arxiv.org/abs/2404.05256" }
+  - title: "StyleBoost: A Study of Personalizing Text-to-Image Generation in Any Style using DreamBooth"
+    authors: Junseo Park, Beomseok Ko, and Hyeryung Jang
+    venue: ICTC 2023
+    venue_full: International Conference on Information and Communication Technology Convergence (ICTC), 2023
+    type: Conference
+    thumbnail: assets/img/posts/styleboost_1.png
+    tldr: Personalizes Stable Diffusion to an artistic style with DreamBooth by pairing style reference images with carefully chosen auxiliary images.
+    page: blog/styleboost
+    links:
+      - { label: Paper, url: "https://ieeexplore.ieee.org/document/10392676" }
+      - { label: Slides, url: "https://github.com/qkrwnstj306/Theory/blob/main/research/styleboost/styleboost-slides.pptx" }
+
+under_review:
+  - venue: CVPR
+    count: 2
+  - venue: ACM TOMM
+    count: 1
+
+projects:
+  - title: Consistent Web Novel Illustration Generation
+    summary: An AI service that keeps web-novel characters consistent across illustrations by binding each character to a token with DreamBooth.
+    period: 2023 · Capstone Design
+    role: AI model & server infrastructure (team of 4)
+    tags: [Stable Diffusion, DreamBooth, Personalization]
+    thumbnail: assets/img/posts/webnovel_1.png
+    page: proj/consistent-web-novel
+    github: https://github.com/qkrwnstj306/capston_design
+  - title: Real-Time Text-to-Image Synthesis with LCM-LoRA
+    summary: A Flask web service that generates SDXL images in near real time by attaching an LCM-LoRA adapter, with ChatGPT-assisted prompts.
+    period: 2024 · Toy project
+    tags: [SDXL, LCM-LoRA, Flask]
+    thumbnail: assets/img/posts/realtime_demo.gif
+    page: proj/realtime
+    github: https://github.com/qkrwnstj306/Text-to-Image-Toy-Project
+  - title: Robust QA with DistilBERT
+    summary: Improved out-of-domain question answering (F1 48.41 → 50.31, EM 31.94 → 35.12) with QA-aware text augmentation and AutoML.
+    period: 2024
+    tags: [NLP, DistilBERT, Data Augmentation]
+    thumbnail: assets/img/posts/robustqa_1.png
+    page: proj/robustqa
+    github: https://github.com/qkrwnstj306/Robust-QA
+  - title: Reinforcement Learning Practice
+    summary: From-scratch implementations of DQN, DDQN, PPO, A2C/A3C and DDPG, tested on Gym, Unity ML-Agents and a UAV positioning task.
+    period: 2023
+    tags: [Reinforcement Learning, PyTorch, Unity]
+    thumbnail: assets/img/posts/rl_1_thumbnail.jpg
+    page: proj/rl
+    github: https://github.com/qkrwnstj306/Reinforcement
+
+education:
+  - degree: Ph.D. in Computer Science & AI
+    school: Dongguk University
+    period: 2025.09 – Present
+    detail: Advisor — Prof. Hyeryung Jang
+    logo: assets/img/dongguk_university.jpg
+  - degree: M.S. in Computer Science & AI
+    school: Dongguk University
+    period: 2023.09 – 2025.08
+    detail: "GPA 4.50 / 4.50"
+    logo: assets/img/dongguk_university.jpg
+  - degree: B.E. in Information and Communication Engineering
+    school: Dongguk University
+    period: 2018.03 – 2023.09
+    detail: "GPA 4.21 / 4.50"
+    logo: assets/img/dongguk_university.jpg
+
+skills:
+  - group: Machine Learning
+    items: [Python, PyTorch]
+  - group: Web & Data
+    items: [Flask, HTML & CSS, MySQL]
+  - group: Languages
+    items: [C, Java]
+  - group: Tools
+    items: [Git, Linux, Inkscape]

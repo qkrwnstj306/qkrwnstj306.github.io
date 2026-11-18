@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap detail">
+  <a class="back" href="/#{{ 'publications' if kind == 'Publication' else 'projects' }}">← All {{ 'publications' if kind == 'Publication' else 'projects' }}</a>
+  <header class="detail-head">
+    <div class="pub-badges">
+      {% if item.venue %}<span class="badge badge-venue">{{ item.venue }}</span>{% endif %}
+      <span class="badge">{{ item.type or kind }}</span>
+      {% if item.period %}<span class="badge">{{ item.period }}</span>{% endif %}
+    </div>
+    <h1>{{ item.title }}</h1>
+    {% if authors_html %}<p class="authors">{{ authors_html }}</p>{% endif %}
+    {% if item.venue_full %}<p class="venue-full">{{ item.venue_full }}</p>{% endif %}
+    {% if tagline %}<p class="tagline">{{ tagline }}</p>{% endif %}
+    <div class="links">
+      {% for l in item.links or [] %}<a class="btn" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+      {% if item.github %}<a class="btn" href="{{ item.github }}">GitHub</a>{% endif %}
+    </div>
+  </header>
+  <div class="prose">
+    {{ body }}
+  </div>
+</article>
+{% endblock %}
