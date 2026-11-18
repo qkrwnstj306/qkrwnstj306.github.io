@@ -288,3 +288,6 @@ mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
   .skills { grid-template-columns: 1fr; gap: 4px; }
   .skills dd { margin-bottom: 10px; }
 }
+
+/* publication without thumbnail (e.g. preprint) */
+.pub-compact { grid-template-columns: 1fr; }

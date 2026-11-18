@@ -1,2 +1,4 @@
 _site/
 __pycache__/
+# CV drafts and the private CV (with phone number) are never published
+cv/
