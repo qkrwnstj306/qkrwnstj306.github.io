@@ -58,6 +58,7 @@
     {% if phone %}<div><span>Mobile</span>{{ phone }}</div>{% endif %}
     <div><span>Homepage</span><a href="{{ p.homepage }}">{{ p.homepage | replace('https://', '') }}</a></div>
     <div><span>GitHub</span><a href="{{ p.github }}">{{ p.github | replace('https://', '') }}</a></div>
+    <div><span>Links</span><a href="{{ p.scholar }}">Google Scholar</a> · <a href="{{ p.linkedin }}">LinkedIn</a></div>
   </div>
 </header>
 
