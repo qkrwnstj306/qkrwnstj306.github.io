@@ -98,10 +98,12 @@ publications:
       - { label: Slides, url: "https://github.com/qkrwnstj306/Theory/blob/main/research/styleboost/styleboost-slides.pptx" }
   - title: "ART-VITON: Measurement-Guided Latent Diffusion for Artifact-Free Virtual Try-On"
     authors: Junseo Park and Hyeryung Jang
-    venue: Preprint 2026
-    venue_full: Preprint, 2026
+    venue: arXiv 2025
+    venue_full: arXiv preprint arXiv:2509.25749, 2025
     type: Preprint
-    tldr: Measurement-guided latent diffusion for artifact-free virtual try-on.
+    tldr: Casts virtual try-on as a linear inverse problem so that non-garment regions stay faithful to the input image, removing boundary artifacts and semantic drift.
+    links:
+      - { label: arXiv, url: "https://arxiv.org/abs/2509.25749" }
 
 under_review:
   - venue: CVPR
